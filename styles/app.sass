@@ -1,22 +1,30 @@
 @use './base'
+@use './components/Logo'
 @use './components/Header'
 @use './components/Footer'
 
-.Home-wrapper
-  .Home-main
+main
+  // height: 100vh
+
+  .Home-Banner
+    height: 45rem
+    background-image: url("/banner.jpg")
+    background-size: cover
+    background-position: 0 -160px
+    background-repeat: no-repeat
+    // height: 100vh
     width: 100%
-    
-    .Home-main-menu-wrapper
-      display: flex
-      justify-content: center
-      margin-top: 1.3rem
-      padding-bottom: 15rem
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
 
-      ul
-        width: 40%
-        background: purple
-        display: flex
-        justify-content: space-between
-        list-style-type: none
+    button
+      border-radius: 20px
 
-    
+  .Home-Banner-text
+    font-size: 4rem
+    color: #FFF500
+    padding: 2rem 3rem
+    // border-radius: 70px
+    // background: rgba(0, 0, 0, 0.3)

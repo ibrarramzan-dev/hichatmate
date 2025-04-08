@@ -1,29 +1,40 @@
+"use client";
+
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { Button } from "@mui/material";
+import { DM_Sans } from "next/font/google";
 import Link from "next/link";
+
+const dm_sans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["900"],
+});
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <div className="Home-main">
-        <div className="Home-main-menu-wrapper">
-          <ul>
-            <Link href="/">
-              <li>Home</li>
+
+      <main>
+        <div className="Home-Banner">
+          <div>
+            <p className={`Home-Banner-text ${dm_sans.className}`}>
+              Make the next move
+            </p>
+
+            <br />
+            <Button variant="contained">Download now</Button>
+            <br />
+            <br />
+            <Link href="/registration">
+              <Button variant="contained">SIGN UP</Button>
             </Link>
-            <Link href="/explore">
-              <li>Explore</li>
-            </Link>
-            <Link href="/pricing">
-              <li>Pricing</li>
-            </Link>
-            <Link href="/about">
-              <li>About</li>
-            </Link>
-          </ul>
+          </div>
         </div>
-      </div>
-      <footer>This is a footer</footer>
+      </main>
+
+      <Footer />
     </div>
   );
 }

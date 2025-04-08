@@ -1,26 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "../styles/app.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const roboto = Roboto({
   subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "Hi-ChatMate",
+  title: "Twieezi",
   description: "connect and match with your favorite people",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <body className={`${geistSans.variable} ${geistMono.variable}`}> */}
-      <body>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }
